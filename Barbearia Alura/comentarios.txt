@@ -1,0 +1,148 @@
+Qual propriedade devo alterar para que os meus <input> tenham um espaço entre a borda e o conteúdo? padding
+HTML
+<label for="radio-email"> Email</label> 
+<input type="radio" name="contato" value="email" id="radio-email"> 
+ou 
+<label for="radio-email"> <input type="radio" name="contato" value="email" id="radio-email"> Email</label> 
+
+Hierarquia CSS
+Inline(1000) > Id (100) > Class (10) > Tag (1)
+
+Obs: o Inline é no html ex:
+<p style="color:purple"> Texto </p> 
+
+form p > p
+
+p 1 (tag)
+
+form p = 1+1=2
+
+.teste 10 (class)
+
+Considerando o código abaixo:
+
+<p class="paragrafo">
+p {
+    color: blue;
+}
+p.paragrafo {
+    color: red;
+}
+.paragrafo {
+    color: purple;
+}
+R: red
+
+------------
+O textarea, para entradas de texto de mais de uma linha
+
+<fieldset></fieldset> // um ou mais campos de um assunto específico => formulario
+legend é o título
+----------
+Alguns tipos de inputs para celular : http://mobileinputtypes.com/
+------
+ deixar uma opção marcada por padrão nos nossos input radio e checkbox, através do atributo checked
+ -----
+ tag <tr> para marcar uma linha de uma tabela.
+ -----
+ Alternativa correta! As tags <thead>, <tbody> e <tfoot> ajudam a deixar o conteúdo da tabela mais bem dividido e mais semântico.
+---------
+na tab se quiser um com linha que deveria ter 5 celulas => agrupar celulas => linha única:
+<tr>
+	<td colspan="5">Texto</td> 
+</tr>
+------------
+A tag tfoot, que representa o rodapé da tabela
+
+Section Vs Div
+section => tudo faz sintaticamente o mesmo conteúdo
+---
+Class Vs Id
+class estilo
+id comportamento
+-----
+fonts para web: https://fonts.google.com/
+---
+mapa:
+copiado do google maps -> compartilhar ou incorporar mapa -> incorporar mapa -> copia o HTML
+
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.449840474898!2d-46.63452058484571!3d-23.588194784669625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a2b2ed7f3a1%3A0xab35da2f5ca62674!2sCaelum%20-%20Escola%20de%20Tecnologia!5e0!3m2!1spt-BR!2sbr!4v1664466712061!5m2!1spt-BR!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+alterei estes dois campos: width="100%" height="300"
+Vídeo: compartilhar no youtube tem a opção incorporar.
+
+---
+pseudo elementos
+:hover :active :visited :required
+
+ex pares dos itens 
+.itens:nth-child(2n){
+	background-color: pink;
+}
+----
+p:first-line{
+	font-style: italic;
+}
+----
+.titulo-principal:first-letter{
+	font-weight: bold;
+}
+.titulo-principal:before{
+	content: "[";
+}
+.titulo-principal::after{
+	content: "]";
+}
+--------
+.itens:before{
+	content: "🟊";
+}
+ps: estrelinha copiada de http://xahlee.info/comp/unicode_stars.html
+---------
+Seletores avançados ex
+main > p { /*p que é filho direto da main*/
+    style
+}
+
+img + p { /*todo conteudo p que vem logo apos uma imagem*/
+    style
+}
+main ~ p { /*todos os seletores depois de uma imagem*/
+    style
+}
+.principal p:not(#missão){ /*no principal todos os que nao estao na missão*/
+    style
+}
+--------------
+Seletores avançados CSS
+Seletor >, para acessar os filhos de determinado elemento. Por exemplo, para acessar todos os p dentro de main:
+main > p {
+}COPIAR CÓDIGO
+Seletor +, para acessar o primeiro irmão de determinado elemento. Por exemplo, para acessar o primeiro p após um img:
+img + p {
+}COPIAR CÓDIGO
+Seletor ~, para acessar todos os irmãos de determinado elemento. Por exemplo, para acessar todos os p após um img:
+img ~ p {
+}COPIAR CÓDIGO
+Seletor not, para acessar os elementos, exceto algum. Por exemplo, para acessar todos os p dentro de main, exceto o p que tem id missao:
+main p:not(#missao) {
+}
+------------
+Opacidade:
+color: rgba(0,0,0,0.3); /*opacidade nas cores*/
+imagem:
+.imagembeneficios{
+	width: 60%;
+	opacity: 1 ; /*1 elemento inteiro 0 nao exibe*/
+	transition: 400ms;
+}
+
+.imagembeneficios:hover{
+	opacity: 0.3;
+}
+-------------
+sombras da pra fazer 
+texto text-shadow
+imagem ou div :
+box-shadow: 10px 10px 10px#000000; /*X Y solido pra transparente espalhar bordaColor*/
+-box-shadow: inset 0 0 5px black;
+Alternativa correta! Sombra interna, preta, com 5px de espalhamento.
